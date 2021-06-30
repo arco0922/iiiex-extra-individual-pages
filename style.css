@@ -1,0 +1,295 @@
+@import 'https://use.fontawesome.com/releases/v5.13.0/css/all.css';
+
+html {
+    touch-action: manipulation;
+}
+
+* {
+    margin: 0;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+/* パソコンで見たときは"pc"のclassがついたDOMが表示される */
+@media only screen and (min-width: 750px) {
+    .sp {
+        display: none !important;
+    }
+}
+
+/* スマートフォンで見たときは"sp"のclassがついたDOMが表示される */
+@media only screen and (max-width: 750px) {
+    .pc {
+        display: none !important;
+    }
+}
+body {
+    background-color: rgb(246, 246, 246);
+    overflow-x: hidden;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(10, 10, 50, 0.8);
+}
+
+.logo {
+    height: 100%;
+}
+.logo img {
+    height: 100%;
+    margin-left: 10px;
+}
+.back_to_lobby {
+    color: white;
+    margin-right: 15px;
+}
+.back_to_lobby:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#contents_middle {
+    margin-left: auto;
+    margin-right: auto;
+    width: min(100vw, 200vh);
+    max-width: 95%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.works {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    min-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: red;*/
+}
+
+.works_window {
+    width: 95%;
+    max-width: calc((100vh - 150px) * 16 / 9);
+    margin-top: 5px;
+    aspect-ratio: 16 / 9;
+    /*background-color: gray;*/
+    border-radius: 10px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(141, 141, 141, 0.25) 0px 54px 55px,
+        rgba(122, 122, 122, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.works_video {
+    width: 100%;
+}
+.works_detail {
+    margin-top: 20px;
+    width: 90%;
+    max-width: calc((100vh - 150px) * 16 / 9);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+        rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+        rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.creators {
+    margin-top: 10px;
+}
+.description {
+    margin-top: 10px;
+}
+.react_btns {
+    display: flex;
+    margin-top: 10px;
+}
+
+.reactBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 35px;
+    max-height: 35px;
+    width: 7vw;
+    height: 7vw;
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    /*background-color: #008000; ←元の背景色は不要なので削除*/
+    border-radius: 20%;
+    text-align: center;
+    box-shadow: 0 6px 5px 0px #838383;
+    transform: translateY(-6px);
+    transition: 0.1s all;
+    overflow: visible;
+
+    /*↓コピーしたCSSをここに追加↓*/
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0ba500+0,008000+100 */
+    background: #ffffff; /* Old browsers */
+}
+
+.reactBtn:hover {
+    cursor: pointer;
+}
+
+.reactBtn:active {
+    box-shadow: 0 2px 0 0 #6e6e6e;
+    transform: translateY(-2px);
+}
+
+.BtnImg {
+    display: block;
+    width: 80%;
+}
+
+.nav_and_react_container.pc {
+    max-width: 300px;
+    margin-top: -10px;
+    flex: 0.4;
+    padding: 0px 10px 10px 10px;
+    height: min(calc(min(100vw - 410px, 940px) * 9 / 16 + 30px), 80vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /*background-color: blue;*/
+}
+#seen_pc {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#next_and_prev_pc {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.next_and_prev_img_pc {
+    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    transition: all 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.next_and_prev_img_pc img {
+    width: 110%;
+}
+.next_and_prev_img_pc:hover {
+    cursor: pointer;
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.507),
+        0 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+#next_pc {
+    flex: 1;
+    max-width: 80%;
+}
+#prev_pc {
+    margin-left: 10px;
+    flex: 0.6;
+}
+#next_img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 2px;
+}
+#prev_img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+#react_pc {
+    height: 40%;
+}
+
+#react_header {
+    display: flex;
+    align-items: center;
+}
+
+#react_window_container {
+    height: min(100%, 120px);
+    margin-top: 5px;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgb(216, 216, 216);
+    background-image: linear-gradient(
+        to right top,
+        transparent 49.5%,
+        rgb(124, 124, 124) 49.5%,
+        rgb(124, 124, 124) 50%,
+        transparent 50%
+    );
+    transition: all 0.5s;
+}
+
+#react_window {
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+#react_window_container.active {
+    background-image: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+        rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+        rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+#react_window.active {
+    opacity: 1;
+}
+
+.member {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.member.exist {
+    opacity: 1;
+}
+
+.member.gone {
+    opacity: 0;
+}
+
+.myReaction {
+    transition: all 1s ease-out;
+}
+
+.myReaction.disappeared {
+    transform: translateY(-10vh);
+    opacity: 0;
+}
+
+.othersReaction {
+    transition: all 1s ease-out;
+}
+
+.othersReaction.disappeared {
+    transform: translateY(-5vh);
+    opacity: 0;
+}
