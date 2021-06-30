@@ -37,6 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 
     background-color: rgba(10, 10, 50, 0.8);
 }
